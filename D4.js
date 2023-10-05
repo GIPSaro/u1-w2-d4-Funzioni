@@ -133,8 +133,19 @@ console.log(reverseString("EPICODE"));
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log("Esercizio 8");
 
-const upperFirst = function (str) {};
-
+const upperFirst = function (str) {
+  let words = str.split("");
+  let stringaString = [];
+  for (i = 0; i < words.length; i++) {
+    let firstchar = words[i].charAt(0);
+    let upperCase = firstchar.toUpperCase();
+    let cutString = words[i].slice(1);
+    let finalWord = upperCase + cutString;
+    stringaString.push(finalWord);
+  }
+  console.log(stringaString.join(""));
+};
+upperFirst("ok ci siamo!");
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
@@ -144,10 +155,9 @@ const upperFirst = function (str) {};
 console.log("Esercizio 9");
 
 function cutString(stringaString) {
-  if ((newString = stringaString.slice(stringaString + 1, stringaString - 1)));
-  {
-    return newString;
-  }
+  const newString = stringaString.slice(1, stringaString.length - 1);
+
+  return newString;
 }
 console.log(cutString("EPICODE"));
 
@@ -156,3 +166,15 @@ console.log(cutString("EPICODE"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+console.log("Esercizio 10");
+
+const giveMeRandom = function (n) {
+  const arr = [];
+
+  for (i = 0; i < n; i++) {
+    arr.push(Math.floor(Math.random() * 10));
+  }
+  return arr;
+};
+console.log(giveMeRandom(7));
