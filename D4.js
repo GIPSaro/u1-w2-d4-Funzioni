@@ -143,10 +143,14 @@ const upperFirst = function (str) {};
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log("Esercizio 9");
 
-const cutString = function (str) {
-  return str.slice(1, str.lenght - 1);
-};
+function cutString(stringaString) {
+  if ((newString = stringaString.slice(stringaString + 1, stringaString - 1)));
+  {
+    return newString;
+  }
+}
 console.log(cutString("EPICODE"));
+
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
